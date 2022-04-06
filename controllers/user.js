@@ -46,7 +46,7 @@ const deleteAll = (req, res) => {
   } catch (error) {
     return res.end(`Error ${error.code}: ${error.message}`);
   }
-  res.end(`All user was deleted.`);
+  res.status(200).end(`All user was deleted.`);
 };
 
 module.exports = {
