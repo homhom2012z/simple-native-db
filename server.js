@@ -25,7 +25,7 @@ const db = new NativeDB.NativeDB();
 
 const startServer = () => {
   server.listen(process.env.PORT, () => {
-    fs.chmodSync("./db/storage/_db1.json", "511", () => {
+    fs.chmodSync("/var/task/db/storage/_db1.json", "511", () => {
       console.log("CHMOD0777: _storage.json");
     });
     db.connect("_db1");
