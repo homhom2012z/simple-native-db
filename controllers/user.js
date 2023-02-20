@@ -19,6 +19,7 @@ const getUser = (req, res) => {
 
 const createUser = (req, res) => {
   const { username, email } = req.body;
+  console.log(username, email);
   db.User({ username: username, email: email })._save();
   res.end("Register successfully");
 };
